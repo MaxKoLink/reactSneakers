@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: "inter", system-ui;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #E7F6FF;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  background: #FFFFFF;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  max-width: 1080px;
+  margin: 50px auto;
+}
+.wrapper a {
+  color: inherit;
+  text-decoration: none;
+}
+.wrapper ul {
+  margin: 0;
+  padding: 0;
+}
+.wrapper li {
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  border-bottom: 1px solid #eaeaea;
+}
+header .headerLeft {
+  display: flex;
+  align-items: center;
+}
+header .headerLeft .headerInfo {
+  text-transform: uppercase;
+}
+header .headerLeft img {
+  margin-right: 15px;
+}
+header .headerLeft h3, header .headerLeft p {
+  margin: 0;
+}
+header .headerRight {
+  display: flex;
+}
+header .headerRight li:first-child {
+  margin-right: 30px;
+}
+
+.content {
+  padding: 40px;
+}
+.content h1 {
+  margin: 0 0 40px 0;
+}
+.content .sneakersWrapper {
+  display: flex;
+  margin-right: 40px;
+}
+.content .card {
+  border: 1px solid #f8f8f8;
+  padding: 20px;
+  width: 210px;
+  border-radius: 40px;
+}
+.content .card p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+.content .card .cardBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .card .cardBottom div {
+  display: flex;
+  flex-direction: column;
+}
+.content .card .cardBottom .button {
+  background: #FFFFFF;
+  border: 1px solid #f2f2f2;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.css.map */
