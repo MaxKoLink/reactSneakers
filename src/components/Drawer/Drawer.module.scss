@@ -1,0 +1,100 @@
+.drawer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 420px;
+
+  right: 0;
+  height: 100%;
+  background: white;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  //!!! p30
+  padding: 0 20px 0 20px;
+  .items {
+    flex: 1;
+    overflow: auto;
+  }
+  h2 {
+
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    img {
+      cursor: pointer;
+    }
+  }
+  .cartTotalBlock {
+    .price {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 20px;
+      div {
+        position: relative;
+        top: -4px;
+        margin: 0 7px;
+        flex: 1;
+        height: 1px;
+        border-bottom: 1px dashed #dfdfdf;
+      }
+    }
+    .greenButton {
+      position: relative;
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 18px;
+      background: #9dd558;
+      border-radius: 18px;
+      border: 0;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out;
+      &:hover {
+        background: lighten(#9dd558, 5%);
+        img {
+          transform: translateX(5px);
+        }
+      }&:active {
+         background: darken(#9dd558, 5%);
+       }
+      img {
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        transition: transform 0.15s ease-in-out;
+      }
+    }
+  }
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  border: 1px solid #f3f3f3;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px;
+  margin-bottom: 20px;
+  b {
+    font-size: 16px;
+  }
+  img {
+    margin-right: 20px;
+  }
+  .cartText {
+    margin-bottom: 5px;
+    margin-right: 12px;
+  }
+  .removeBtn {
+    opacity: 0.5;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
