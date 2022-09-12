@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Header.module.scss";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header>
       <div className={styles.headerLeft}>
@@ -13,7 +13,7 @@ const Header = () => {
       </div>
 
       <ul className={styles.headerRight}>
-        <li>
+        <li onClick={props.onClickCart}>
           <img width={18} height={18} src="/img/cart.svg" alt="" />
           <span>1205 czk</span>
         </li>

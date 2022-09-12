@@ -1,3 +1,4 @@
+import React from "react";
 import Card from "./components/Card/Card";
 import Header from "./components/Header/Header";
 import Drawer from "./components/Drawer/Drawer";
@@ -26,10 +27,13 @@ const arr = [
 ];
 
 function App() {
+  const [isCartOppened, setIsCartOppened] = React.useState(false);
   return (
     <div className="wrapper">
-      <Drawer />
-      <Header />
+      {isCartOppened ? (
+        <Drawer onClose={() => setIsCartOppened(false)} />
+      ) : null}
+      <Header onClickCart={() => setIsCartOppened(true)} />
       <div className="content">
         <div className="searchBlock">
           <h1>Все кроссовки</h1>
@@ -44,6 +48,8 @@ function App() {
               title={value.name}
               price={value.price}
               imageUrl={value.imageUrl}
+              favoriteClick={() => console.log("Product was added to favorite")}
+              plusClick={() => console.log("Product was added to the cart")}
             />
           ))}
         </div>

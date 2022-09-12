@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Drawer.module.scss";
 
-const Drawer = () => {
+const Drawer = (props) => {
   return (
-    <div style={{ display: "none" }} className="overlay">
+    <div className="overlay">
       <div className={styles.drawer}>
         <h2>
           Корзина
@@ -11,6 +11,7 @@ const Drawer = () => {
             className={styles.removeBtn}
             src="/img/delete.svg"
             alt="Remove"
+            onClick={props.onClose}
           />
         </h2>
         <div className={styles.items}>
