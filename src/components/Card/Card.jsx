@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./Card.module.scss";
 
-const Card = (props) => {
+const Card = ({ favoriteClick, imageUrl, title, price, plusClick }) => {
   const [isAdded, setIsAdded] = React.useState(false);
   const onClickPlus = () => {
+    plusClick({ imageUrl, title, price });
     setIsAdded(!isAdded);
   };
   return (
@@ -12,15 +13,15 @@ const Card = (props) => {
         <img
           src="/img/heart-unlike.svg"
           alt="Unliked"
-          onClick={props.favoriteClick}
+          onClick={favoriteClick}
         />
       </div>
-      <img width={133} height={112} src={props.imageUrl} alt="" />
-      <p>{props.title}</p>
+      <img width={133} height={112} src={imageUrl} alt="" />
+      <p>{title}</p>
       <div className={styles.cardBottom}>
         <div>
           <span>Price:</span>
-          <b>{props.price} czk.</b>
+          <b>{price} czk.</b>
         </div>
         <img
           className={styles.plus}

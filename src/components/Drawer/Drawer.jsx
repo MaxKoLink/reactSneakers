@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Drawer.module.scss";
 
-const Drawer = (props) => {
+const Drawer = ({ onClose, items = [] }) => {
   return (
     <div className="overlay">
       <div className={styles.drawer}>
@@ -11,40 +11,24 @@ const Drawer = (props) => {
             className={styles.removeBtn}
             src="/img/delete.svg"
             alt="Remove"
-            onClick={props.onClose}
+            onClick={onClose}
           />
         </h2>
         <div className={styles.items}>
-          <div className={styles.cartItem}>
-            <img
-              width={70}
-              height={70}
-              src="/img/sneakers/1.jpg"
-              alt="Sneakers"
-            />
-            <div className={styles.cartText}>
-              <p>Мужские Кроссовки Nike Air Max 270</p>
-              <b>12 999 czk</b>
+          {items.map((obj) => (
+            <div className={styles.cartItem}>
+              <img width={70} height={70} src={obj.imageUrl} alt="Sneakers" />
+              <div className={styles.cartText}>
+                <p>{obj.title}</p>
+                <b>{obj.price}</b>
+              </div>
+              <img
+                className={styles.removeBtn}
+                src="/img/delete.svg"
+                alt="Remove"
+              />
             </div>
-            <img
-              className={styles.removeBtn}
-              src="/img/delete.svg"
-              alt="Remove"
-            />
-          </div>
-          {/*<div className={styles.cartItem}>*/}
-          {/*  <img*/}
-          {/*    width={70}*/}
-          {/*    height={70}*/}
-          {/*    src="/img/sneakers/1.jpg"*/}
-          {/*    alt="Sneakers"*/}
-          {/*  />*/}
-          {/*  <div className="cart-text">*/}
-          {/*    <p>Мужские Кроссовки Nike Air Max 270</p>*/}
-          {/*    <b>12 999 czk</b>*/}
-          {/*  </div>*/}
-          {/*  <img className="removeBtn" src="/img/delete.svg" alt="Remove" />*/}
-          {/*</div>*/}
+          ))}
         </div>
         <div className={styles.cartTotalBlock}>
           <ul>

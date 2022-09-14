@@ -36,6 +36,7 @@ body {
 .content .sneakersWrapper {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .searchBlock {
