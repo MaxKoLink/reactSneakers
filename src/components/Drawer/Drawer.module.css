@@ -3,6 +3,7 @@
   flex-direction: column;
   position: absolute;
   width: 420px;
+  overflow: scroll;
   right: 0;
   height: 100%;
   background: white;
@@ -11,7 +12,6 @@
 }
 .drawer .items {
   flex: 1;
-  overflow: auto;
 }
 .drawer h2 {
   display: flex;
@@ -93,6 +93,42 @@
 }
 .cartItem .removeBtn:hover {
   opacity: 1;
+}
+
+.emptyBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+.emptyBox .img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+.emptyBox h2 {
+  margin: 0;
+}
+.emptyBox p {
+  opacity: 0.6;
+}
+.emptyBox .greenButton {
+  position: relative;
+  padding: 22px 31px;
+  background: #9dd558;
+  border-radius: 18px;
+  border: 0;
+  width: 245px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.emptyBox .greenButton img {
+  padding-right: 44px;
 }
 
 /*# sourceMappingURL=Drawer.module.css.map */

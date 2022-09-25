@@ -17,6 +17,7 @@ body {
   border-radius: 20px;
   max-width: 1080px;
   margin: 50px auto;
+  overflow: hidden;
 }
 .wrapper a {
   color: inherit;
@@ -35,8 +36,8 @@ body {
 }
 .content .sneakersWrapper {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+
 }
 
 .searchBlock {
@@ -56,9 +57,11 @@ body {
   padding: 13px;
   font-size: 16px;
   width: 200px;
+  outline: none;
 }
 
 .overlay {
+  overflow: hidden;
   position: absolute;
   left: 0;
   top: 0;

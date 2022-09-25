@@ -33,7 +33,7 @@ body {
   padding: 40px;
   .sneakersWrapper {
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
     flex-wrap: wrap;
   }
 
@@ -49,16 +49,19 @@ body {
     display: flex;
     border-radius: 10px;
     padding: 0 15px;
+
     input {
       border: 0;
       padding: 13px;
       font-size: 16px;
       width: 200px;
+      outline: none;
     }
   }
 }
 
 .overlay {
+  overflow: hidden;
   position: absolute;
   left: 0;
   top: 0;

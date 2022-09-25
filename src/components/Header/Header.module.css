@@ -21,9 +21,14 @@ header .headerLeft p {
 }
 header .headerRight {
   display: flex;
+  cursor: pointer;
 }
-header .headerRight li:first-child {
-  margin-right: 30px;
+header .headerRight .price {
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+header .headerRight li {
+  margin-right: 20px;
 }
 
 /*# sourceMappingURL=Header.module.css.map */

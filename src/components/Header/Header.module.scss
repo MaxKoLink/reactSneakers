@@ -20,8 +20,14 @@ header {
   }
   .headerRight {
     display: flex;
-    li:first-child {
-      margin-right: 30px;
+    cursor: pointer;
+
+    .price {
+      padding-left: 10px ;
+      text-transform: uppercase;
+    }
+    & li {
+      margin-right: 20px;
     }
   }
 }

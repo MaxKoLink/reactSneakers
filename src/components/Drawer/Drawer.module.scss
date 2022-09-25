@@ -3,19 +3,19 @@
   flex-direction: column;
   position: absolute;
   width: 420px;
+  overflow: scroll;
+
 
   right: 0;
   height: 100%;
   background: white;
   box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
-  //!!! p30
   padding: 0 20px 0 20px;
   .items {
     flex: 1;
-    overflow: auto;
-  }
-  h2 {
 
+  }
+  & h2 {
     display: flex;
     justify-content: space-between;
     font-size: 24px;
@@ -97,4 +97,42 @@
       opacity: 1;
     }
   }
+}
+
+//Empty  box styles
+.emptyBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  .img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    margin: 0;
+  }
+  p {
+    opacity: 0.6;
+  }
+  .greenButton {
+    position: relative;
+    padding: 22px 31px;
+    background: #9dd558;
+    border-radius: 18px;
+    border: 0;
+    width: 245px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color:white;
+    & img {
+      padding-right: 44px;
+    }
+  }
+
 }
